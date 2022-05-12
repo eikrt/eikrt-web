@@ -1,0 +1,73 @@
+.title_box {
+}
+.header_box {
+    display:flex;
+    flex-direction:row;
+	background-color: lightyellow;
+}
+.text {
+	background-color: lightyellow;
+}
+.blog_entry {
+    padding:16px;    
+}
+.blog_entry h3 {
+}
+.blog_entry p {
+        padding:0px;
+}
+.blog_entry a {
+        text-decoration: none;
+}
+.blog_entry p {
+
+   	font-family: "Tahoma", Geneva, sans-serif;
+  	padding:16px;
+	font-size: 20px;
+
+}
+
+.header_box h2 {
+    padding:16px;
+}
+.header_box h1 {
+    padding: 16px;
+   	font-family: "Tahoma", Geneva, sans-serif;
+	color:tomato;
+
+    text-decoration: none;
+
+}
+.mursu_image {
+}
+.header_box a:link {
+	color:tomato;
+
+    text-decoration: none;
+}
+
+.header_box a:visited {
+	color:tomato;
+
+    text-decoration: none;
+}
+.header_header a:link {
+	color:tomato;
+
+    text-decoration: none;
+}
+
+.header_header a:visited {
+	color:tomato;
+
+    text-decoration: none;
+}
+
+.text a:link {
+
+   	font-family: "Tahoma", Geneva, sans-serif;
+    text-decoration: none;
+    padding:16px;
+	font-size: 20px;
+	color:tomato;
+}
