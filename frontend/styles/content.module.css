@@ -13,16 +13,16 @@
 }
 .blog_entry h3 {
 }
-.blog_entry p {
-        padding:0px;
+.blog_entry h2 {
+    
+    color:lightyellow;
 }
 .blog_entry a {
         text-decoration: none;
 }
-.blog_entry p {
+.blog_entry pre {
 
    	font-family: "Tahoma", Geneva, sans-serif;
-  	padding:16px;
 	font-size: 20px;
 
 }

@@ -5,10 +5,10 @@ export default function Home() {
     return (
 	<div>
 	    <Layout>
-	    <div className={contentStyles.blog_entry}>
-	    </div>
 	    </Layout>
-	    <h3>FROM BACKEND</h3>
+	    <div className={contentStyles.blog_entry}>
+	    <h2>Nothing to see yet!</h2>
+	    </div>
 	    </div>
     )
 }

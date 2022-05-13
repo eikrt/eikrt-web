@@ -1,14 +1,40 @@
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout.js';
 import contentStyles from '../styles/content.module.css';
+import axios from 'axios'
 export default function Home() {
+    const [posts, setPosts] = useState([])
+    useEffect(() => {
+
+	axios.get("http://localhost:8080/blogposts/about").then(res => {
+	    console.log(res.data)
+	    setPosts([...posts, res.data])
+	}).catch((error) => {
+	    console.log(error)
+	});
+    },[])
     return (
 	<div>
 	    <Layout>
-	    <div className={contentStyles.blog_entry}>
-	    </div>
 	    </Layout>
-	    <h3>FROM BACKEND</h3>
+	    <div className={contentStyles.blog_entry}>
+	    {posts.map((post,index) => {
+		return(
+			<div key={index}>
+			{post.map((p,index) => {
+			    return (
+				    <div key={index}>
+				    <h2>{p.title}</h2>
+				    <pre>{p.body}</pre>
+				    </div>
+			    );
+		})}
+		</div>
+		);
+	    })}
+	    </div>
+	    <img src="images/mursu1.png"></img>
 	</div>
     )
 }

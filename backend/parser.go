@@ -8,9 +8,11 @@ import (
 type post struct {
     Title string  `json:"title"`
     Body string  `json:"body"`
+    ImgName string  `json:"imgname"`
 }
 func getAndParseOrgFiles(p string) []post{
-	file, err := os.Open(fmt.Sprintf("../posts/%s/posts.emd",p))
+	postPath := fmt.Sprintf("../../blogposts/%s/posts.emd",p)
+	file, err := os.Open(postPath)
 	if err != nil {
 		fmt.Printf("File does not exist")
 	}
@@ -27,6 +29,9 @@ func getAndParseOrgFiles(p string) []post{
 		if firstSymbol == "*" {
 			returnPosts = append(returnPosts, post{Title: "", Body: ""})
 			returnPosts[len(returnPosts)-1].Title = strings.ReplaceAll(scanner.Text(), "*", "") + "\n"
+		} else if firstSymbol == ">" {
+			returnPosts[len(returnPosts)-1].ImgName = strings.ReplaceAll(scanner.Text(), ">", "") + "\n"
+
 		} else {
 			returnPosts[len(returnPosts)-1].Body = returnPosts[len(returnPosts)-1].Body + scanner.Text() + "\n"
 		}
