@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Head from 'next/head'
 import Layout from '../components/layout.js';
 import contentStyles from '../styles/content.module.css';
 import axios from 'axios'
@@ -8,33 +7,33 @@ export default function Home() {
     useEffect(() => {
 
 	axios.get("http://localhost:8080/blogposts/about").then(res => {
-	    console.log(res.data)
-	    setPosts([...posts, res.data])
+console.log(res.data)
+setPosts([...posts, res.data])
 	}).catch((error) => {
-	    console.log(error)
+console.log(error)
 	});
     },[])
     return (
 	<div>
-	    <Layout>
-	    </Layout>
-	    <div className={contentStyles.blog_entry}>
-	    {posts.map((post,index) => {
+   <Layout>
+   </Layout>
+   <div className={contentStyles.blog_entry}>
+   {posts.map((post,index) => {
 		return(
 			<div key={index}>
 			{post.map((p,index) => {
-			    return (
-				    <div key={index}>
-				    <h2>{p.title}</h2>
-				    <pre>{p.body}</pre>
-				    </div>
-			    );
+return (
+ <div key={index}>
+	<h2>{p.title}</h2>
+<pre>{p.body}</pre>
+</div>
+ );
 		})}
 		</div>
 		);
-	    })}
-	    </div>
-	    <img src="images/mursu1.png"></img>
+   })}
+   </div>
+   <img src="images/mursu1.png"></img>
 	</div>
     )
 }
