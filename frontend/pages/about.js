@@ -6,7 +6,8 @@ export default function Home() {
     const [posts, setPosts] = useState([])
     useEffect(() => {
 
-	axios.get("http://localhost:8080/blogposts/about").then(res => {
+	//axios.get("http://localhost:8080/blogposts/about", {crossdomain:true}).then(res => {
+	axios.get("https://eikrt.com/api/blogposts/about").then(res => {
 console.log(res.data)
 setPosts([...posts, res.data])
 	}).catch((error) => {
