@@ -11,7 +11,10 @@ type post struct {
     ImgName string  `json:"imgname"`
 }
 func getAndParseOrgFiles(p string) []post{
-	postPath := fmt.Sprintf("blogposts/%s/posts.emd",p)
+	postPath := fmt.Sprintf("../blogposts/%s/posts.emd",p)
+    if os.Getenv("ENV") == "prod" {
+	    postPath = fmt.Sprintf("blogposts/%s/posts.emd",p)
+    }
 	file, err := os.Open(postPath)
 	if err != nil {
 		fmt.Printf("File does not exist")
