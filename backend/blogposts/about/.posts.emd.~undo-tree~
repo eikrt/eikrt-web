@@ -1,5 +1,5 @@
 (undo-tree-save-format-version . 1)
-"992826cac621304feb18a24cc7d2b04c61749e6f"
+"b0a450befbf61479482e6c514829f30d68215b97"
 [nil nil nil nil (25217 13239 901180 241000) 0 nil]
 ([nil nil (("j" . 513) (503 . 514) ("img" . 503) (502 . 506) ("%" . 502) (502 . 503) (394 . 395) (499 . 501) (t 25217 13240 753785 826000)) (("
 " . 499) (undo-tree-id12 . -1) (undo-tree-id13 . -1) ("
@@ -14,5 +14,9 @@ nil
 nil
 ([nil nil (("j" . -2) (undo-tree-id122 . -1) (2 . 3) ("k" . -2) (undo-tree-id123 . -1) (undo-tree-id124 . -1) 3 (2 . 3) (" " . -2) (undo-tree-id125 . -1) (undo-tree-id126 . -1) 3 (t 25218 21956 256119 168000)) nil (25218 22014 397747 17000) 0 nil])
 ([nil nil (("j" . -2) (undo-tree-id127 . -1) (2 . 3) (1 . 2) (t 25218 22014 408255 653000)) nil (25218 22024 833830 638000) 0 nil])
-([nil current ((502 . 507) (464 . 470) (414 . 417) (411 . 414) (t 25218 22024 844280 281000)) nil (25218 22292 786668 36000) 0 nil])
+([nil nil ((502 . 507) (464 . 470) (414 . 417) (411 . 414) (t 25218 22024 844280 281000)) nil (25218 30658 517784 708000) 0 nil])
+([nil current (("j" . -236) (undo-tree-id4 . -1) (236 . 237) (" " . 235) (undo-tree-id5 . -1) (236 . 237) (334 . 336) ("s" . -334) (undo-tree-id6 . -1) 335 (319 . 335) (318 . 319) (311 . 318) ("e" . -311) (undo-tree-id7 . -1) ("y" . -312) (undo-tree-id8 . -1) (" " . -313) (undo-tree-id9 . -1) ("n" . -314) (undo-tree-id10 . -1) ("e" . -315) (undo-tree-id11 . -1) ("v" . -316) (undo-tree-id12 . -1) ("e" . -317) (undo-tree-id13 . -1) ("r" . -318) (undo-tree-id14 . -1) (" " . -319) (undo-tree-id15 . -1) 320 (305 . 320) (281 . 282) ("
+" . -281) (undo-tree-id16 . -1) 282 (" " . -282) (281 . 282) (125 . 126) (" " . -125) (undo-tree-id17 . -1) 126 (t 25218 22292 796923 880000)) nil (25218 30699 654230 879000) 0 nil] [nil nil (("I'm 23 year old software developer and student who is very enthusiastic about computers and software in general. My favourite things are system administration and playing with different kinds of network things, web backend developing and configuring my Linux machines. I like to create games .
+" . 13) (undo-tree-id0 . -74) (undo-tree-id1 . -74) (undo-tree-id2 . -74) (undo-tree-id3 . -74) 87 (t 25218 22292 796923 880000)) ((13 . 307)) (25218 30658 517672 737000) 0 nil])
+nil
 nil
