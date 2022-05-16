@@ -6,9 +6,11 @@ import (
 	"strings"
 )
 type post struct {
-    Title string  `json:"title"`
-    Body string  `json:"body"`
-    ImgName string  `json:"imgname"`
+    Lines []line  `json:"lines"`
+}
+type line struct {
+    Line string  `json:"line"`
+    Type string  `json:"type"`
 }
 func getAndParseOrgFiles(p string) []post{
 	postPath := fmt.Sprintf("../blogposts/%s/posts.emd",p)
@@ -22,27 +24,73 @@ func getAndParseOrgFiles(p string) []post{
 	defer file.Close()
 	
 	scanner := bufio.NewScanner(file)
-	returnPosts := []post {} 
+	returnPosts := []post {
+		post {
+			[]line {
+				line {
+					Line: "",
+					Type: "",
+				},
+			},
+		},
+	} 
 	for scanner.Scan() {
 		if len(scanner.Text()) == 0 {
 			continue
 		}
 		
 		firstSymbol := scanner.Text()[0:1]
-		if firstSymbol == "*" {
-			returnPosts = append(returnPosts, post{Title: "", Body: ""})
-			returnPosts[len(returnPosts)-1].Title = strings.ReplaceAll(scanner.Text(), "*", "") + "\n"
-		} else if firstSymbol == ">" {
-			returnPosts[len(returnPosts)-1].ImgName = strings.ReplaceAll(scanner.Text(), ">", "") + "\n"
+		secondSymbol := scanner.Text()[1:2]
+		thirdSymbol := scanner.Text()[2:3]
+		fourthSymbol := scanner.Text()[3:4]
+		if firstSymbol == "*" && secondSymbol == "*" && thirdSymbol == "*" && fourthSymbol == "*" {
+			l := line {
+				Line: strings.ReplaceAll(scanner.Text(), "*", ""),
+				Type: "h4",
+				
+			}
+			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
+		} else if firstSymbol == "*" && secondSymbol == "*" && thirdSymbol == "*" {
+			l := line {
+				Line: strings.ReplaceAll(scanner.Text(), "*", ""),
+				Type: "h3",
+				
+			}
+			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
+		} else if firstSymbol == "*" && secondSymbol == "*"{
+			l := line {
+				Line: strings.ReplaceAll(scanner.Text(), "*", ""),
+				Type: "h2",
+				
+			}
+			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
+		} else if firstSymbol == "*" {
+			l := line {
+				Line: strings.ReplaceAll(scanner.Text(), "*", ""),
+				Type: "h1",
+				
+			}
+			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
+		} else if firstSymbol == "@" {
+			l := line {
+				Line: strings.ReplaceAll(scanner.Text(), "@", ""),
+				Type: "img",
+				
+			}
+			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 
 		} else {
-			returnPosts[len(returnPosts)-1].Body = returnPosts[len(returnPosts)-1].Body + scanner.Text() + "\n"
+			l := line {
+				Line: scanner.Text(),
+				Type: "body",
+				
+			}
+			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 		}
 		
 	}
 	return returnPosts
 }
-
 func getBlogposts(s string) []post {
 	return getAndParseOrgFiles(s)
 }
