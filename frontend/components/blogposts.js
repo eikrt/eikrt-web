@@ -21,8 +21,9 @@ export default function Blogposts(props) {
   return (
     <div>
       <Layout></Layout>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
       <div className={contentStyles.blog_entry}>
-        {posts.map((post, index) => {
+        {posts && posts.map((post, index) => {
           return (
             <div key={index}>
               {post.map((p, index) => {
@@ -37,7 +38,7 @@ export default function Blogposts(props) {
                           {line.type === "h3" && <h3>{line.line}</h3>}
                           {line.type === "h4" && <h4>{line.line}</h4>}
                           {line.type === "img" && (
-                            <img src={`images/${line.line}`}></img>
+                            <img className={contentStyles.blog_img} src={`images/${line.line}`}></img>
                           )}
                         </div>
                       );
