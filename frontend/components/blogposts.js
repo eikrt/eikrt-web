@@ -21,7 +21,6 @@ export default function Blogposts(props) {
   return (
     <div>
       <Layout></Layout>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
       <div className={contentStyles.blog_entry}>
         {posts && posts.map((post, index) => {
           return (
