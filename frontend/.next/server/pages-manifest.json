@@ -2,16 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/about": "pages/about.html",
-  "/game_projects": "pages/game_projects.html",
-  "/game_reviews": "pages/game_reviews.html",
-  "/": "pages/index.html",
-  "/movie_reviews": "pages/movie_reviews.html",
-  "/music_reviews": "pages/music_reviews.html",
-  "/other_projects": "pages/other_projects.html",
-  "/programming_projects": "pages/programming_projects.html",
-  "/projects": "pages/projects.html",
-  "/reviews": "pages/reviews.html",
-  "/tutorials": "pages/tutorials.html",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }

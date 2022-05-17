@@ -6,17 +6,17 @@ import (
 	"strings"
 )
 type post struct {
-    Lines []line  `json:"lines"`
+	Lines []line  `json:"lines"`
 }
 type line struct {
-    Line string  `json:"line"`
-    Type string  `json:"type"`
+	Line string  `json:"line"`
+	Type string  `json:"type"`
 }
-func getAndParseOrgFiles(p string) []post{
-	postPath := fmt.Sprintf("../blogposts/%s/posts.emd",p)
-    if os.Getenv("ENV") == "prod" {
-	    postPath = fmt.Sprintf("blogposts/%s/posts.emd",p)
-    }
+func loadAndParseFiles(p string) []post{
+	postPath := fmt.Sprintf("../blogposts/%s/posts.emu",p)
+	if os.Getenv("ENV") == "prod" {
+		postPath = fmt.Sprintf("blogposts/%s/posts.emu",p)
+	}
 	file, err := os.Open(postPath)
 	if err != nil {
 		fmt.Printf("File does not exist")
@@ -29,11 +29,11 @@ func getAndParseOrgFiles(p string) []post{
 			[]line {
 				line {
 					Line: "",
-					Type: "",
+						Type: "",
+					},
 				},
 			},
-		},
-	} 
+		} 
 	for scanner.Scan() {
 		if len(scanner.Text()) == 0 {
 			continue
@@ -46,45 +46,45 @@ func getAndParseOrgFiles(p string) []post{
 		if firstSymbol == "*" && secondSymbol == "*" && thirdSymbol == "*" && fourthSymbol == "*" {
 			l := line {
 				Line: strings.ReplaceAll(scanner.Text(), "*", ""),
-				Type: "h4",
-				
-			}
+					Type: "h4",
+					
+				}
 			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 		} else if firstSymbol == "*" && secondSymbol == "*" && thirdSymbol == "*" {
 			l := line {
 				Line: strings.ReplaceAll(scanner.Text(), "*", ""),
-				Type: "h3",
-				
-			}
+					Type: "h3",
+					
+				}
 			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 		} else if firstSymbol == "*" && secondSymbol == "*"{
 			l := line {
 				Line: strings.ReplaceAll(scanner.Text(), "*", ""),
-				Type: "h2",
-				
-			}
+					Type: "h2",
+					
+				}
 			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 		} else if firstSymbol == "*" {
 			l := line {
 				Line: strings.ReplaceAll(scanner.Text(), "*", ""),
-				Type: "h1",
-				
-			}
+					Type: "h1",
+					
+				}
 			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 		} else if firstSymbol == "@" {
 			l := line {
 				Line: strings.ReplaceAll(scanner.Text(), "@", ""),
-				Type: "img",
-				
-			}
+					Type: "img",
+					
+				}
 			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 
 		} else {
 			l := line {
 				Line: scanner.Text(),
-				Type: "body",
-				
-			}
+					Type: "body",
+					
+				}
 			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 		}
 		
@@ -92,5 +92,5 @@ func getAndParseOrgFiles(p string) []post{
 	return returnPosts
 }
 func getBlogposts(s string) []post {
-	return getAndParseOrgFiles(s)
+	return loadAndParseFiles(s)
 }
