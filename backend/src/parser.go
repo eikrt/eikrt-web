@@ -35,7 +35,7 @@ func loadAndParseFiles(p string) []post{
 			},
 		} 
 	for scanner.Scan() {
-		if len(scanner.Text()) == 0 {
+		if len(scanner.Text()) < 5 {
 			continue
 		}
 		
@@ -63,6 +63,17 @@ func loadAndParseFiles(p string) []post{
 					Type: "h2",
 					
 				}
+			returnPosts = append(returnPosts,
+
+				post {
+					[]line {
+						line {
+							Line: "",
+								Type: "",
+							},
+						},
+					},
+			)
 			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
 		} else if firstSymbol == "*" {
 			l := line {
@@ -75,6 +86,14 @@ func loadAndParseFiles(p string) []post{
 			l := line {
 				Line: strings.ReplaceAll(scanner.Text(), "@", ""),
 					Type: "img",
+					
+				}
+			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)
+
+		} else if firstSymbol == "%" {
+			l := line {
+				Line: strings.ReplaceAll(scanner.Text(), "%", ""),
+					Type: "break",
 					
 				}
 			returnPosts[len(returnPosts)-1].Lines = append(returnPosts[len(returnPosts)-1].Lines, l)

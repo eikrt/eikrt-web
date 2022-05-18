@@ -31,11 +31,15 @@ export default function Blogposts(props) {
                     {Object.values(p.lines).map((line, index) => {
                       return (
                         <div className={contentStyles.text_box}key={index}>
-                          {line.type === "body" && <pre>{line.line}</pre>}
+                          {line.type === "body" &&
+			   <pre>
+			      <div className={contentStyles.paragraph} dangerouslySetInnerHTML={{__html: line.line}} />
+			   </pre>}
                           {line.type === "h1" && <h1>{line.line}</h1>}
                           {line.type === "h2" && <h2>{line.line}</h2>}
                           {line.type === "h3" && <h3>{line.line}</h3>}
                           {line.type === "h4" && <h4>{line.line}</h4>}
+                          {line.type === "break" && <br/>}
                           {line.type === "img" && (
                             <img className={contentStyles.blog_img} src={`images/${line.line}`}></img>
                           )}

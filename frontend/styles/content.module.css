@@ -48,7 +48,7 @@
     text-decoration: none;
     display: block;
     text-align: left;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     word-wrap: break-all;
     white-space:normal;
 }
@@ -88,18 +88,19 @@
     color:lightyellow;
 }
 .blog_entry h2 {
-    font-size:16px;
+    font-size:18px;
     font-family: "Tahoma", Geneva, sans-serif;
     
     color:lightyellow;
 }
 .blog_entry a {
     text-decoration: none;
+    color:brown;
 }
 .blog_entry pre {
 
     font-family: "Tahoma", Geneva, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0.2vw;
     word-wrap: break-all;
     white-space:normal;
@@ -155,9 +156,15 @@
     font-size: 1vw;
     color:tomato;
 }
-@media only screen and (max-width: 400px) {
+.paragraph {
+    margin:0px;
+}
+@media only screen and (max-width: 992px) {
     .title_box {
 	display:none;
+    }
+    .main_title_box {
+	
     }
     .header_box h2 {
 	top: 50%;
@@ -183,8 +190,8 @@
 	display: block;
 	text-align: left;
 	font-size: 14px;
-    word-wrap: break-all;
-    white-space:normal;
+	word-wrap: break-all;
+	white-space:normal;
     }
 }
 

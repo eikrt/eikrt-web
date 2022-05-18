@@ -1,3 +1,11 @@
-**Programming projects
-
-Here will be projects related to programming.
+**Eikrt Website
+%%%%%
+<a href="https://eikrt.com/eikrt-web"Github link</a>
+%%%%
+So, you are reading this post on my website, cool! I'll give you a quick round on what's inside. As many websites, this site consists of three parts: "database", backend and frontend.
+%%%%%
+The "database" of this site is plain text files that reside on the project directory. The files are in .emu format (Eino's markup), which is a very simple markup language similiar to <a href="https://www.markdownguide.org/">Markdown</a>.
+%%%%%
+The backend is implemented in Go with <a href="https://github.com/gin-gonic/gin">Gin</a> framework. Backend handles parsing of markup files and serving them. The files are parsed into json and served.
+%%%%%
+This website's frontend fetches the data from the API and displays it. The page is created with <a href="https://nextjs.org/">Next.js</a>.
