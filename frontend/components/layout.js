@@ -12,7 +12,7 @@ export default function Layout() {
       <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={contentStyles.header_box}>
-      <div className={contentStyles.title_box}>
+      <div className={contentStyles.main_title_box}>
       <a href="/">
       {" "}
       <h2>Eikrt website</h2>{" "}
@@ -61,7 +61,7 @@ export default function Layout() {
             <img className={contentStyles.blog_img}src="/images/hamburger.png"/>
             <div className={contentStyles.dropdown_content}>
               <a href="/">Home</a>
-              <a href="/programming_projects">Programming Projects</a>
+              <a href="/programming_projects">Coding Projects</a>
               <a href="/game_projects">Game Projects</a>
               <a href="/other_projects">Other Projects</a>
               <a href="/game_reviews">Game reviews</a>

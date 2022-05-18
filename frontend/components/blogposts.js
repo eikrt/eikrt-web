@@ -30,7 +30,7 @@ export default function Blogposts(props) {
                   <div key={index}>
                     {Object.values(p.lines).map((line, index) => {
                       return (
-                        <div key={index}>
+                        <div className={contentStyles.text_box}key={index}>
                           {line.type === "body" && <pre>{line.line}</pre>}
                           {line.type === "h1" && <h1>{line.line}</h1>}
                           {line.type === "h2" && <h2>{line.line}</h2>}

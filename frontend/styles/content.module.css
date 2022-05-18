@@ -48,7 +48,9 @@
     text-decoration: none;
     display: block;
     text-align: left;
-    font-size: 1vw;
+    font-size: 1.5vw;
+    word-wrap: break-all;
+    white-space:normal;
 }
 
 .dropdown_content a:hover {
@@ -59,6 +61,8 @@
     display: block;
 }
 
+.main_title_box {
+}
 .title_box {
 }
 .header_box  {
@@ -72,16 +76,19 @@
 .text {
     background-color: lightyellow;
 }
+.text_box {
+}
 .blog_entry {
     padding:1vw;    
+    width:100%;
 }
 .blog_entry h3 {
-    font-size:1vw;
+    font-size:14px;
     font-family: "Tahoma", Geneva, sans-serif;
     color:lightyellow;
 }
 .blog_entry h2 {
-    font-size:2vw;
+    font-size:16px;
     font-family: "Tahoma", Geneva, sans-serif;
     
     color:lightyellow;
@@ -92,10 +99,11 @@
 .blog_entry pre {
 
     font-family: "Tahoma", Geneva, sans-serif;
-    font-size: 1.5vw;
+    font-size: 14px;
     margin: 0.2vw;
+    word-wrap: break-all;
+    white-space:normal;
 }
-
 .header_box h2 {
     top: 50%;
     font-size: 2vw;
@@ -146,5 +154,37 @@
     padding:16px;
     font-size: 1vw;
     color:tomato;
+}
+@media only screen and (max-width: 400px) {
+    .title_box {
+	display:none;
+    }
+    .header_box h2 {
+	top: 50%;
+	font-size: 28px;
+	margin-left:2vw;
+	font-family: "Tahoma", Geneva, sans-serif;
+	color:tomato;
+
+	text-decoration: none;
+
+    }
+    .hamburger_box img {
+	width:64px;
+	height:64px;
+    }
+    .dropdown_content a {
+	font-family: "Tahoma", Geneva, sans-serif;
+	color:lightyellow;
+	float: none;
+	color: black;
+	padding: 2vw;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	font-size: 14px;
+    word-wrap: break-all;
+    white-space:normal;
+    }
 }
 
