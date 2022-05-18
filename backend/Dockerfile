@@ -18,4 +18,4 @@ COPY --from=builder "$APP_HOME"/app $APP_HOME
 
 EXPOSE 8080
 COPY blogposts/ blogposts/
-CMD ["ENV=prod ./app"]
+CMD ["./app"]
