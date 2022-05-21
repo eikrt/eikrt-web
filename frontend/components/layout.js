@@ -47,6 +47,7 @@ export default function Layout() {
               <a href="/game_reviews">Game reviews</a>
               <a href="/movie_reviews">Movie reviews</a>
               <a href="/music_reviews">Music reviews</a>
+              <a href="/other_reviews">Other reviews</a>
             </div>
           </div>
         </div>
@@ -67,6 +68,7 @@ export default function Layout() {
               <a href="/game_reviews">Game reviews</a>
               <a href="/movie_reviews">Movie reviews</a>
               <a href="/music_reviews">Music reviews</a>
+              <a href="/other_reviews">Other reviews</a>
               <a href="/about">About</a>
             </div>
       </div>

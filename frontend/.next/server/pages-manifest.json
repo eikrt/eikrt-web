@@ -2,9 +2,13 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/movie_reviews": "pages/movie_reviews.js",
+  "/other_reviews": "pages/other_reviews.js",
+  "/tutorials": "pages/tutorials.js",
+  "/projects": "pages/projects.js",
+  "/": "pages/index.js",
+  "/about": "pages/about.js",
   "/music_reviews": "pages/music_reviews.js",
-  "/programming_projects": "pages/programming_projects.js",
-  "/game_projects": "pages/game_projects.js",
-  "/": "pages/index.js"
+  "/reviews": "pages/reviews.js",
+  "/movie_reviews": "pages/movie_reviews.js",
+  "/game_reviews": "pages/game_reviews.js"
 }

@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/game_projects": [
+    "/about": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/game_projects.js"
+      "static/chunks/pages/about.js"
     ],
     "/game_reviews": [
       "static/chunks/webpack.js",
@@ -50,10 +50,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/music_reviews.js"
     ],
-    "/programming_projects": [
+    "/other_reviews": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/programming_projects.js"
+      "static/chunks/pages/other_reviews.js"
+    ],
+    "/projects": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/projects.js"
+    ],
+    "/reviews": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/reviews.js"
+    ],
+    "/tutorials": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tutorials.js"
     ]
   },
   "ampFirstPages": []
