@@ -4,7 +4,8 @@ import Blogposts from '../components/blogposts.js';
 export default function GameProjects() {
     return(
 	    <div>
-	    <Blogposts blogFile="game_projects"/>
+      <Layout></Layout>
+	    <Blogposts blogFile="blogposts/game_projects"/>
 	    </div>
     );
 }

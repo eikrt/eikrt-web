@@ -6,7 +6,8 @@ import Blogposts from '../components/blogposts.js';
 export default function Tutorials() {
     return(
 	    <div>
-	    <Blogposts blogFile="tutorials"/>
+      <Layout></Layout>
+	    <Blogposts blogFile="blogposts/tutorials"/>
 	    </div>
     );
 }

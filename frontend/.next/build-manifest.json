@@ -35,6 +35,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/about.js"
     ],
+    "/game_projects": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/game_projects.js"
+    ],
     "/game_reviews": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -45,15 +50,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/movie_reviews.js"
     ],
-    "/music_reviews": [
+    "/other_projects": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/music_reviews.js"
+      "static/chunks/pages/other_projects.js"
     ],
-    "/other_reviews": [
+    "/programming_projects": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/other_reviews.js"
+      "static/chunks/pages/programming_projects.js"
     ],
     "/projects": [
       "static/chunks/webpack.js",
