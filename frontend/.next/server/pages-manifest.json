@@ -1,14 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/game_reviews": "pages/game_reviews.js",
-  "/": "pages/index.js",
-  "/tutorials": "pages/tutorials.js",
-  "/movie_reviews": "pages/movie_reviews.js",
-  "/projects": "pages/projects.js",
-  "/programming_projects": "pages/programming_projects.js",
-  "/game_projects": "pages/game_projects.js",
-  "/other_projects": "pages/other_projects.js",
-  "/reviews": "pages/reviews.js"
+  "/_document": "pages/_document.js"
 }

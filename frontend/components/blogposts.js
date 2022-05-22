@@ -28,7 +28,7 @@ export default function Blogposts(props) {
               {post.map((p, index) => {
 		  if (p.isDateBlogpost) {
 		      return(
-			  <h2><a href={`/${p.directory}/#${p.heading}`}>{p.heading}</a></h2>
+			  <h2><a href={`/${p.directory}#${p.heading}`}>{p.heading}</a></h2>
 		      );
 		  }
                 return (
