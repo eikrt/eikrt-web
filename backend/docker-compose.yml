@@ -1,0 +1,9 @@
+services:
+  server:
+    network_mode: "host"
+    environment:
+      ENV: "prod"
+    build:
+      context: .
+      dockerfile: Dockerfile
+
