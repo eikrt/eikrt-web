@@ -12,10 +12,10 @@ FROM registry.semaphoreci.com/golang:1.18
 
 ENV APP_HOME /home/eino/eikrt-web/backend
 RUN mkdir -p "$APP_HOME"
-WORKDIR "$APP_HOME/app"
+WORKDIR "$APP_HOME"
 
-COPY --from=builder "$APP_HOME"/app $APP_HOME/app/app
+COPY --from=builder "$APP_HOME" $APP_HOME
 
 EXPOSE 8080
 COPY blogposts/ blogposts/
-CMD ["./app/app"]
+CMD ["./app"]

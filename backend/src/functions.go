@@ -4,13 +4,18 @@ import (
      "log"
      "sort"
      "strconv"
+     "os"
 )
 func getLatestposts(s string) []post {
 	var posts = [][]post{
 		
 	}
 	var flattenedPosts = []post{}
-	files, err := ioutil.ReadDir("../blogposts/")
+    blogPostDir := "../blogposts/"
+    if os.Getenv("ENV") == "PROD" {
+        blogPostDir = "blogposts/"
+    }
+	files, err := ioutil.ReadDir(blogPostDir)
 	if err != nil {
 	    log.Fatal(err)
 	}
