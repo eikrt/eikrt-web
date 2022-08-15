@@ -12,7 +12,7 @@ func getLatestposts(s string) []post {
 	}
 	var flattenedPosts = []post{}
     blogPostDir := "../blogposts/"
-    if os.Getenv("ENV") == "PROD" {
+    if os.Getenv("ENV") == "prod" {
         blogPostDir = "blogposts/"
     }
 	files, err := ioutil.ReadDir(blogPostDir)
